@@ -1,0 +1,35 @@
+# Conda environment for Square (robosuite 1.2.0 / robomimic 0.2.0, as in Diffusion Policy).
+#   conda env create -f environment_square.yml && conda activate transport-square
+# robosuite 1.2.0 runs on mujoco_py (MuJoCo 2.1); after creating the environment, install it as
+# described in README.md ("Square: MuJoCo"). The PyTorch wheel is built for CUDA 12.8.
+name: transport-square
+channels: [conda-forge]
+dependencies:
+  - python=3.10
+  - pip
+  - swig
+  - mesalib<25        # OSMesa, for mujoco_py
+  - glew
+  - patchelf
+  - pip:
+      - --extra-index-url https://download.pytorch.org/whl/cu128
+      - torch==2.11.0
+      - numpy<2
+      - cython<3
+      - scipy
+      - h5py
+      - numba
+      - termcolor
+      - tqdm
+      - psutil
+      - tensorboardX
+      - diffusers==0.40.0
+      - einops
+      - smac==2.3.1
+      - ConfigSpace==1.2.2
+      - zarr<3
+      - matplotlib
+      - pillow
+      - imageio
+      - jupyterlab
+      - ipykernel

@@ -1,0 +1,31 @@
+# Conda environment for Push-T (all policies, training, evaluation, tuning, notebooks).
+#   conda env create -f environment_pusht.yml && conda activate transport-pusht
+# The PyTorch wheel below is built for CUDA 12.8; choose another index URL for other CUDA versions
+# (https://pytorch.org/get-started/locally/).
+name: transport-pusht
+channels: [conda-forge]
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - --extra-index-url https://download.pytorch.org/whl/cu128
+      - torch==2.11.0
+      - numpy
+      - scipy
+      - zarr<3
+      - numcodecs
+      - gymnasium
+      - pymunk<7          # pymunk 7 removed an API used by the Push-T environment
+      - pygame
+      - shapely
+      - opencv-python-headless
+      - scikit-image
+      - diffusers==0.40.0 # DDPM scheduler of Diffusion Policy
+      - einops
+      - smac==2.3.1       # hyperparameter search (scripts/tune.py)
+      - ConfigSpace==1.2.2
+      - matplotlib
+      - pillow
+      - imageio
+      - jupyterlab
+      - ipykernel

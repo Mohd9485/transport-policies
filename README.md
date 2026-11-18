@@ -1,7 +1,7 @@
 # Conditional Optimal Transport and Triangular Maps for Imitation Learning
 
 Mohammad Al-Jarrah, Yuhang Mei, Karen Leung, Bamdad Hosseini, Amirhossein Taghvaei
-(University of Washington). Submitted to L4DC 2027.
+(University of Washington). Paper: [arXiv:2611.19815](https://arxiv.org/abs/2611.19815).
 
 ![Push-T rollouts of the eight policies](assets/pusht_rollouts.gif)
 
@@ -178,11 +178,11 @@ best configuration found for the paper (the settings in `configs/`).
 ## Citation
 
 ```bibtex
-@inproceedings{aljarrah2027conditional,
-  title     = {Conditional Optimal Transport and Triangular Maps for Imitation Learning},
-  author    = {Al-Jarrah, Mohammad and Mei, Yuhang and Leung, Karen and Hosseini, Bamdad and Taghvaei, Amirhossein},
-  booktitle = {Submitted to the Learning for Dynamics and Control Conference (L4DC)},
-  year      = {2027}
+@article{aljarrah2026conditional,
+  title   = {Conditional Optimal Transport and Triangular Maps for Imitation Learning},
+  author  = {Al-Jarrah, Mohammad and Mei, Yuhang and Leung, Karen and Hosseini, Bamdad and Taghvaei, Amirhossein},
+  journal = {arXiv preprint arXiv:2611.19815},
+  year    = {2026}
 }
 ```
 
